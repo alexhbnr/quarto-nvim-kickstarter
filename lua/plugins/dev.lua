@@ -1,5 +1,14 @@
 return {
 
+    {"pgilad/vim-skeletons",
+	 dependencies = "SirVer/ultisnips",
+     init = function ()
+       vim.cmd([[
+         let skeletons#autoRegister = 1
+         let skeletons#skeletonsDir = "~/.config/nvim/skeletons" 
+       ]])
+     end
+    }
 	-- { "folke/neoconf.nvim", cmd = "Neoconf", config = true },
 
 	-- {'stevearc/profile.nvim',
