@@ -1,5 +1,27 @@
 # Changelog
 
+## [2.3.0](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v2.2.0...v2.3.0) (2023-12-22)
+
+
+### Features
+
+* add ls for dot graphviz ([205bcc9](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/205bcc98b4286c32334530c06d33a9a8419f314f))
+* create new terminals in a vertical split instead of below ([d4bab6c](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/d4bab6c94661fdcc68f688f57448ec5b0e7c360d))
+
+## [2.2.0](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v2.1.0...v2.2.0) (2023-11-28)
+
+
+### Features
+
+* configure paste image plugin for quarto and add molten example ([24470a6](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/24470a63bd03745a792f316c98adca79f1cd8951))
+
+## [2.1.0](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v2.0.1...v2.1.0) (2023-11-21)
+
+
+### Features
+
+* exempt markdown headings from `]]` `[[` ts textobjects jumps ([c80622d](https://github.com/jmbuhr/quarto-nvim-kickstarter/commit/c80622d6a51a1108cfad1fff51ea60fd5e0780c7))
+
 ## [2.0.1](https://github.com/jmbuhr/quarto-nvim-kickstarter/compare/v2.0.0...v2.0.1) (2023-11-16)
 
 

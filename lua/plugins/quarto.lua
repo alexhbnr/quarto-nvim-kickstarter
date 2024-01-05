@@ -27,7 +27,7 @@ return {
     },
     opts = {
       lspFeatures = {
-        languages = { "r", "python", "julia", "bash", "lua", "html" },
+        languages = { "r", "python", "julia", "bash", "lua", "html", "dot" },
       },
     },
   },
@@ -54,6 +54,7 @@ return {
           "latex",
           "html",
           "css",
+          "dot"
         },
         highlight = {
           enable = true,
@@ -268,14 +269,18 @@ return {
         flags = lsp_flags,
         settings = {
           yaml = {
-            schemas = {
-              -- add custom schemas here
-              -- e.g.
-              ["https://raw.githubusercontent.com/hits-mbm-dev/kimmdy/main/src/kimmdy/kimmdy-yaml-schema.json"] =
-              "kimmdy.yml",
+            schemaStore = {
+              enable = true,
+              url = "",
             },
           },
         },
+      })
+
+      lspconfig.dotls.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
+        flags = lsp_flags,
       })
 
       local function strsplit(s, delimiter)
@@ -699,7 +704,23 @@ return {
 
   -- paste an image to markdown from the clipboard
   -- :PasteImg,
-  { "dfendr/clipboard-image.nvim" },
+  {
+    "dfendr/clipboard-image.nvim",
+    keys = {
+      { "<leader>ip", ":PasteImg<cr>", desc = "image paste" },
+    },
+    cmd = {
+      "PasteImg",
+    },
+    config = function()
+      require 'clipboard-image'.setup {
+        quarto = {
+          img_dir = "img",
+          affix = "![](%s)"
+        }
+      }
+    end
+  },
 
   -- preview equations
   {
@@ -709,4 +730,20 @@ return {
       { "<leader>eh", ':lua require"nabla".popup()<cr>',       "hover equation" },
     },
   },
+
+  -- {
+  --   "benlubas/molten-nvim",
+  --   build = ":UpdateRemotePlugins",
+  --   init = function()
+  --     vim.g.molten_image_provider = "image.nvim"
+  --     vim.g.molten_output_win_max_height = 20
+  --     vim.g.molten_auto_open_output = false
+  --   end,
+  --   keys = {
+  --     { "<leader>mi", ":MoltenInit<cr>",                desc = "molten init" },
+  --     { "<leader>mv", ":<C-u>MoltenEvaluateVisual<cr>", mode = "v",                  desc = "molten eval visual" },
+  --     { "<leader>mr", ":MoltenReevaluateCell<cr>",      desc = "molten re-eval cell" },
+  --   }
+  -- },
+
 }
