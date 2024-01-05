@@ -434,4 +434,9 @@ return {
       vim.keymap.set('n', '<leader>ic', clear_all_images, { buffer = true, desc = 'image [c]lear' })
     end,
   },
+
+    {
+        "simnalamburt/vim-mundo",
+        cmd = { "MundoToggle", "MundoShow" },
+    },
 }
