@@ -31,4 +31,15 @@ return {
       vim.keymap.set('', '<f1>', toggle_profile)
     end,
   },
+
+  {
+    'pgilad/vim-skeletons',
+    dependencies = 'SirVer/ultisnips',
+    init = function()
+      vim.cmd [[
+         let skeletons#autoRegister = 1
+         let skeletons#skeletonsDir = "~/.config/nvim/skeletons" 
+       ]]
+    end,
+  },
 }

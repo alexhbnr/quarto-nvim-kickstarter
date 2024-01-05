@@ -1,0 +1,16 @@
+---
+title: "Untitled"
+author: "Alex Hübner"
+date: "\`r format(Sys.time(), '%b %d, %Y')\`"
+output:
+    pdf_document:
+        fig_caption: yes
+---
+
+\`\`\`{r libraries, echo=F}
+library(knitr)
+library(data.table)
+library(tidyverse)
+library(pander)
+opts_chunk$set(echo=F, warning=F, message=F)
+\`\`\`
