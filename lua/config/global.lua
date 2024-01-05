@@ -13,9 +13,18 @@ vim.o.fillchars = 'eob: '
 
 -- more opinionated
 vim.opt.number = true -- show linenumbers
+<<<<<<< HEAD
 vim.opt.mouse = 'a' -- enable mouse
 vim.opt.mousefocus = true
 vim.opt.clipboard:append 'unnamedplus' -- use system clipboard
+=======
+vim.opt.ruler = true -- show line and column number
+vim.opt.mouse = "a" -- enable mouse
+vim.opt.mousefocus = true
+vim.opt.clipboard:append("unnamedplus") -- use system clipboard
+vim.opt.backup = false
+vim.opt.swapfile = false
+>>>>>>> 3d59fbf (Add general settings from .dotfiles)
 
 vim.opt.timeoutlen = 400 -- until which-key pops up
 vim.opt.updatetime = 250 -- for autocommands and hovers
@@ -23,22 +32,35 @@ vim.opt.updatetime = 250 -- for autocommands and hovers
 -- don't ask about existing swap files
 vim.opt.shortmess:append 'A'
 
+<<<<<<< HEAD
 -- mode is already in statusline
 vim.opt.showmode = false
 
 -- use less indentation
 local tabsize = 2
+=======
+-- use spaces as tabs
+local tabsize = 4
+>>>>>>> 3d59fbf (Add general settings from .dotfiles)
 vim.opt.expandtab = true
 vim.opt.shiftwidth = tabsize
 vim.opt.tabstop = tabsize
+vim.opt.softtabstop = tabsize
+vim.opt.wrap = false
+vim.opt.copyindent = true
 
 -- space as leader
+<<<<<<< HEAD
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+=======
+vim.g.mapleader = ","
+>>>>>>> 3d59fbf (Add general settings from .dotfiles)
 
 -- smarter search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.showmatch = true
 
 -- indent
 vim.opt.smartindent = true
