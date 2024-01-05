@@ -3,9 +3,12 @@ vim.opt.termguicolors = true
 
 -- more opinionated
 vim.opt.number = true -- show linenumbers
+vim.opt.ruler = true -- show line and column number
 vim.opt.mouse = "a" -- enable mouse
 vim.opt.mousefocus = true
 vim.opt.clipboard:append("unnamedplus") -- use system clipboard
+vim.opt.backup = false
+vim.opt.swapfile = false
 
 vim.opt.timeoutlen = 400 -- until which-key pops up
 vim.opt.updatetime = 250 -- for autocommands and hovers
@@ -14,18 +17,21 @@ vim.opt.updatetime = 250 -- for autocommands and hovers
 vim.opt.shortmess:append("A")
 
 -- use spaces as tabs
-local tabsize = 2
+local tabsize = 4
 vim.opt.expandtab = true
 vim.opt.shiftwidth = tabsize
 vim.opt.tabstop = tabsize
+vim.opt.softtabstop = tabsize
+vim.opt.wrap = false
+vim.opt.copyindent = true
 
 -- space as leader
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = ","
 
 -- smarter search
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.showmatch = true
 
 -- indent
 vim.opt.smartindent = true
@@ -82,3 +88,6 @@ vim.opt.scrolloff = 5
 
 -- (don't == 0) replace certain elements with prettier ones
 vim.opt.conceallevel = 0
+
+-- set Python host programs
+-- vim.g.python3_host_prog = "$HOME/micromamba/envs/jupyter/bin/python3"
