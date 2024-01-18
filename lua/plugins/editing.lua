@@ -41,6 +41,7 @@ return {
 		version = nil,
 		branch = "master",
 		config = true, -- default settings
+		lazy = false
 	},
 	{
 		"danymat/neogen",
