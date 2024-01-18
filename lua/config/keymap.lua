@@ -315,3 +315,6 @@ wk.register({
 	["<m-I>"] = { insert_py_chunk, "python code chunk" },
 	["<c-x><c-x>"] = { "<c-x><c-o>", "omnifunc completion" },
 }, { mode = "i" })
+
+-- enable spelling en_gb
+nmap("<leader>sc", "setlocal spell spelllang=en_gb<CR>")
