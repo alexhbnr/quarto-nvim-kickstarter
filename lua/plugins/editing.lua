@@ -3,6 +3,8 @@ return {
   -- disables hungry features for files larget than 2MB
   { 'LunarVim/bigfile.nvim' },
 
+  { "tpope/vim-repeat" },
+
   -- add/delete/change can be done with the keymaps
   -- ys{motion}{char}, ds{char}, and cs{target}{replacement}
   {
