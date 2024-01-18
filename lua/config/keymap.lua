@@ -236,6 +236,7 @@ wk.register({
 
 -- insert mode
 wk.register({
+<<<<<<< HEAD
   ['<m-->'] = { ' <- ', 'assign' },
   ['<m-m>'] = { ' |>', 'pipe' },
   ['<m-i>'] = { insert_r_chunk, 'r code chunk' },
@@ -409,3 +410,6 @@ wk.register({
     x = { ':w<cr>:source %<cr>', '[x] source %' },
   },
 }, { mode = 'n', prefix = '<leader>' })
+
+-- enable spelling en_gb
+nmap("<leader>sc", "setlocal spell spelllang=en_gb<CR>")
