@@ -142,3 +142,7 @@ vim.filetype.add {
 -- additional builtin vim packages
 -- filter quickfix list with Cfilter
 vim.cmd.packadd 'cfilter'
+
+-- Change symbol of invisible characters
+vim.opt.listchars = {eol = '↵'}  -- , tab = '▶'}
+vim.opt.list = true
