@@ -89,5 +89,9 @@ vim.opt.scrolloff = 5
 -- (don't == 0) replace certain elements with prettier ones
 vim.opt.conceallevel = 0
 
+-- Change symbol of invisible characters
+vim.opt.listchars = {eol = '↵'}  -- , tab = '▶'}
+vim.opt.list = true
+
 -- set Python host programs
 -- vim.g.python3_host_prog = "$HOME/micromamba/envs/jupyter/bin/python3"

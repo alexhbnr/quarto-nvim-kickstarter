@@ -317,4 +317,11 @@ wk.register({
 }, { mode = "i" })
 
 -- enable spelling en_gb
-nmap("<leader>sc", "setlocal spell spelllang=en_gb<CR>")
+nmap("<leader>sc", ":setlocal spell spelllang=en_gb<CR>")
+
+-- Vimcasts.org tips
+-- Change intendation to the keymapping of Textmate
+nmap("<Leader>[", "<<")
+nmap("<Leader>]", ">>")
+vmap("<Leader>[", "<gv")
+vmap("<Leader>]", ">gv")
