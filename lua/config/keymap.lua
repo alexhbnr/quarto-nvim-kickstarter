@@ -244,6 +244,16 @@ wk.register({
   ['<c-x><c-x>'] = { '<c-x><c-o>', 'omnifunc completion' },
 }, { mode = 'i' })
 
+-- enable spelling en_gb
+nmap("<leader>sc", ":setlocal spell spelllang=en_gb<CR>")
+
+-- Vimcasts.org tips
+-- Change intendation to the keymapping of Textmate
+nmap("<Leader>[", "<<")
+nmap("<Leader>]", ">>")
+vmap("<Leader>[", "<gv")
+vmap("<Leader>]", ">gv")
+
 local function new_terminal(lang)
   vim.cmd('vsplit term://' .. lang)
 end
