@@ -45,6 +45,7 @@ return {
     -- like ipython, R, bash
     'jpalardy/vim-slime',
     dev = false,
+
     init = function()
       vim.b['quarto_is_python_chunk'] = false
       Quarto_is_in_python_chunk = function()
