@@ -234,15 +234,15 @@ return {
 
       lspconfig.r_language_server.setup({
         on_attach = on_attach,
-        capabilities = capabilities,
+        -- capabilities = capabilities,
         flags = lsp_flags,
-        settings = {
-          r = {
-            lsp = {
-              rich_documentation = false,
-            },
-          },
-        },
+        -- settings = {
+        --   r = {
+        --     lsp = {
+        --       rich_documentation = false,
+        --     },
+        --   },
+        -- },
       })
 
       lspconfig.cssls.setup({
@@ -496,6 +496,7 @@ return {
       { "L3MON4D3/LuaSnip" },
       { "rafamadriz/friendly-snippets" },
       { "onsails/lspkind-nvim" },
+      { "jalvesaq/cmp-nvim-r" },
 
       -- optional
       -- more things to try:
