@@ -2,6 +2,9 @@
 
 local animals = require('misc.style').animals
 
+-- language
+vim.cmd("language en_GB")
+
 -- proper colors
 vim.opt.termguicolors = true
 
