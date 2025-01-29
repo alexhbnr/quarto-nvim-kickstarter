@@ -132,6 +132,15 @@ return {
         root_dir = util.root_pattern('.git', '.marksman.toml', '_quarto.yml'),
       }
 
+      -- another optional language server for grammar and spelling
+      -- <https://github.com/valentjn/ltex-ls>
+      lspconfig.ltex.setup {
+        capabilities = capabilities,
+        cmd = { "ltex-ls" },
+        filetypes = { 'markdown', 'tex', 'quarto', 'rmd' },
+        flags = { debounce_text_changes = 300 },
+      }
+
       lspconfig.r_language_server.setup {
         capabilities = capabilities,
         flags = lsp_flags,
@@ -182,7 +191,7 @@ return {
         flags = lsp_flags,
       }
 
-      lspconfig.tsserver.setup {
+      lspconfig.ts_ls.setup {
         capabilities = capabilities,
         flags = lsp_flags,
         filetypes = { 'js', 'javascript', 'typescript', 'ojs' },
